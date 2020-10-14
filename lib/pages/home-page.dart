@@ -37,7 +37,9 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(title: Text("Awesome App")),
       body: data != null
-          ? ListView.builder(
+          ? GridView.builder(
+              gridDelegate:
+                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
               itemBuilder: (context, index) {
                 return ListTile(
                     title: Text(data[index]["title"]),
